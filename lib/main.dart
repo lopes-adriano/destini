@@ -1,7 +1,7 @@
 import 'package:destini/story_brain.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(Destini());
+void main() => runApp(const Destini());
 
 class Destini extends StatelessWidget {
   const Destini({super.key});
@@ -10,7 +10,7 @@ class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: StoryPage(),
+      home: const StoryPage(),
     );
   }
 }
@@ -36,8 +36,8 @@ class _StoryPageState extends State<StoryPage> {
             fit: BoxFit.cover,
           ),
         ),
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: const BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -47,7 +47,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: Center(
                   child: Text(
                     brain.getStory(brain.storyNumber),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 25.0,
                     ),
                   ),
@@ -65,13 +65,13 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   child: Text(
                     brain.getChoice1(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20.0,
                     ),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Expanded(
@@ -88,7 +88,7 @@ class _StoryPageState extends State<StoryPage> {
                     },
                     child: Text(
                       brain.getChoice2(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20.0,
                       ),
                     ),
